@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "238283757709",
+    "firebase_url": "https://votingapp-35b51.firebaseio.com",
+    "project_id": "votingapp-35b51",
+    "storage_bucket": "votingapp-35b51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238283757709:android:e20c36dad0d3e067",
+        "android_client_info": {
+          "package_name": "com.example.nobel.votingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238283757709-5g8163bgpd7vge9kr3a4r8msnua09g9j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nobel.votingapp",
+            "certificate_hash": "081dbcd7e9da813d65b464989905e72ffc6ed08d"
+          }
+        },
+        {
+          "client_id": "238283757709-5k1jie6r22asailgv5a0nfgntdvvm5v0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9sfqafHfABqgOtU-pVJGnyxUVTTJQB58"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238283757709-5k1jie6r22asailgv5a0nfgntdvvm5v0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
