@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                                 .build(),
                         RC_SIGN_IN);
 
-
+                startActivity(intent)
             }
         })
         btnpart.setOnClickListener({
@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                                         AuthUI.IdpConfig.GoogleBuilder().build()))
                                 .build(),
                         RC_SIGN_IN);
+                startActivity(intent)
 
 
             }

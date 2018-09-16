@@ -35,7 +35,7 @@ class Voteintermed: AppCompatActivity() {
                             if(h.key.toString().compareTo(pass)==0){
 
                                 Toast.makeText(this@Voteintermed,"Event-id Exist",Toast.LENGTH_LONG).show()
-                                fdv= FirebaseDataView(h.child("part1").value.toString(),h.child("part2").value.toString(),h.child("part3").value.toString(),h.child("part4").value.toString())
+                                fdv= FirebaseDataView(h.child("part1").value.toString(),h.child("part2").value.toString(),h.child("part3").value.toString(),h.child("part4").value.toString(),h.child("vp1").value.toString(),h.child("vp2").value.toString(),h.child("vp3").value.toString(),h.child("vp4").value.toString())
                                 flag=1
                                 break
                             }
@@ -46,6 +46,10 @@ class Voteintermed: AppCompatActivity() {
                             intent.putExtra("p2",fdv.Part2)
                             intent.putExtra("p3",fdv.Part3)
                             intent.putExtra("p4",fdv.Part4)
+                            intent.putExtra("vp1",fdv.vp1)
+                            intent.putExtra("vp2",fdv.vp2)
+                            intent.putExtra("vp3",fdv.vp3)
+                            intent.putExtra("vp4",fdv.vp4)
                             intent.putExtra("id",pass)
                             startActivity(intent)
                         }

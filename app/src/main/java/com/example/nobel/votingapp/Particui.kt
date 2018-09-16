@@ -7,33 +7,21 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.participantsui.*
 
 class Particui: AppCompatActivity() {
-    private var value1=0
-    private var value2=0
-    private var value3=0
-    private var value4=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.participantsui)
         val i=intent
+        var value1=Integer.parseInt(i.getStringExtra("vp1"))
+        var value2=Integer.parseInt(i.getStringExtra("vp2"))
+        var value3=Integer.parseInt(i.getStringExtra("vp3"))
+        var value4=Integer.parseInt(i.getStringExtra("vp4"))
         val ref=FirebaseDatabase.getInstance().getReference("events")
         val id=i.getStringExtra("id")
-        ref.addValueEventListener(object :ValueEventListener{
-            override fun onCancelled(p0: DatabaseError) {
+        tvp2.text=i.getStringExtra("p2")+"\n"+"VOTE"+value2
+        tvp1.text=i.getStringExtra("p1")+"\n"+"VOTE"+value1
+        tvp3.text=i.getStringExtra("p3")+"\n"+"VOTE"+value3
+        tvp4.text=i.getStringExtra("p4")+"\n"+"VOTE"+value4
 
-            }
-
-            override fun onDataChange(p0: DataSnapshot) {
-                Log.d("hel3","fucking hang")
-                value1=Integer.parseInt(p0.child(id).child("vp1").value.toString())
-                value2=Integer.parseInt(p0.child(id).child("vp2").value.toString())
-                value3=Integer.parseInt(p0.child(id).child("vp3").value.toString())
-                value4=Integer.parseInt(p0.child(id).child("vp4").value.toString())
-            }
-        })
-        tvp1.text=i.getStringExtra("p1")+"\n"+"VOTE"+value1.toString()
-        tvp2.text=i.getStringExtra("p2")+"\n"+"VOTE"+value2.toString()
-        tvp3.text=i.getStringExtra("p3")+"\n"+"VOTE"+value3.toString()
-        tvp4.text=i.getStringExtra("p4")+"\n"+"VOTE"+value4.toString()
 
             tvp1.setOnClickListener {
 
